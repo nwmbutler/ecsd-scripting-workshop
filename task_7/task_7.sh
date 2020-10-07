@@ -9,6 +9,3 @@ read document
 
 number_of_words $document
 
-doc_length () {
-  echo "number of words in document:" $( wc -w < $1 )
-}

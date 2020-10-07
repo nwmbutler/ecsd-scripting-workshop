@@ -12,17 +12,19 @@ echo "string length: ${#mystring}"
 
 // 4
 
-case USERNAME=""
-case "$1" in
-   "Nick")
-     USERNAME="Nicholas"
-     ;;
-   "Dave")
-     USERNAME="David"
+echo -n "Enter your Access Level (Admin, User, Guest): "
+read accessLevel
 
-     ;;
+case $accessLevel in
+  Admin ) echo "You have full permission $accessLevel"
+  ;;
+  User ) echo "Check with Admin for permissions $accessLevel"
+  ;;
+  Guest ) echo "Your permissions are limited $accessLevel, consider logging in."
+  ;;
+  * ) echo "incorrect input, please try again"
 esac
-
+ 
 //5
 
 echo -n "Enter your the hour in 24hr format > "
